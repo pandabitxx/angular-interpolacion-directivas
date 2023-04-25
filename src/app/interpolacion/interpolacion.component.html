@@ -1,0 +1,32 @@
+<!-- <div class="row mt-5">
+    <p>Componente de Interpolacion</p>
+    <div class="col clase-lista-estudiantes">    -->
+        <!-- {{nombre + " HTML"}} el nombre se definio en la logica TS -->
+        <!-- {{nombre?.toUpperCase() + " HTML"}} // Para ponerlo en mayusculas -->
+    <!-- </div>
+</div> -->
+
+<!-- <div class="row mt-5">
+    <p>Lista de Alumnos</p>
+    <div class="col" [ngClass]="nombre ? 'clase-lista-estudiantes' : ''">   
+        {{nombre?.toUpperCase()}} 
+    </div> 
+</div> -->
+
+<div class="container">
+    <div class="row mt-5 clase-titulo-lista-estudiantes">
+        <h1>Lista de Alumnos Usando Directivas</h1>
+        <p>Solo se muestra la tabla si TODOS los alumnos son mayores de edad</p>
+        <div class="col clase-lista-estudiantes">   
+            <div *ngIf="tieneAlumnosMayoresDeEdad()">
+                <h3 class="mt-2">ESTUDIANTES</h3>
+                <ul>
+                <li *ngFor="let alumno of alumnos">
+                    {{ alumno.nombre }} - {{ alumno.edad }}
+                </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+</div>
+
